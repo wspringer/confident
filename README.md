@@ -29,7 +29,7 @@ loader.printUsage();
 
 Resulting into:
 
-```shell
+```
 PATH
 The path to search for executables
 
@@ -45,7 +45,7 @@ const config = loader.loadOrFail();
 
 Which in this case (since `SF_KEY` is not defined) will result in:
 
-```shell
+```
 Failed to load configuration; sf.key is a required field
 Consider checking the value of the SF_KEY environment variable
 ```
