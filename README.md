@@ -56,6 +56,9 @@ You can pass in a default configuration object that must comply with the (partia
 
 ```typescript
 const config = loader.loadOrFail({sf: { key: 'foo' } });
+console.info(config.path);
+console.info(config.sf.key);
+console.info(config.whatever.foo.bar);
 ```
 
-In the above case, the configuration will load, since the loader will rely on the default value 'foo' in case `SF_KEY` isn't set.
+In the above case, the configuration will load, since the loader will rely on the default value 'foo' in case `SF_KEY` isn't set. Also note that the compiler will fail to compile the code if you're referring to non existing configuration variables.

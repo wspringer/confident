@@ -16,4 +16,4 @@ const loader = Loader(
 
 // loader.loadOrFail();
 
-loader.loadOrFail();
+const config = loader.loadOrFail();
