@@ -55,7 +55,7 @@ If that environment variable would have been defined, it would have returned a c
 You can pass in a default configuration object that must comply with the (partial) data structure defined by yup. (And the compiler will you if it isn't.)
 
 ```typescript
-const config = loader.loadOrFail({sf: { key: 'foo' } });
+const config = loader.loadOrFail({ sf: { key: 'foo' } });
 console.info(config.path);
 console.info(config.sf.key);
 console.info(config.whatever.foo.bar);
