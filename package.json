@@ -1,0 +1,39 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^14.11.2",
+    "gts": "^3.1.0",
+    "jest": "^27.2.0",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "lodash": "^4.17.21",
+    "marked": "^3.0.4",
+    "marked-terminal": "^4.2.0",
+    "ts-custom-error": "^3.2.0",
+    "yup": "^0.32.9"
+  }
+}

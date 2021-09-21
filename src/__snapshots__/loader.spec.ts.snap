@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the configuration solution should allow you to print usage 1`] = `
+"[34mPATH[39m
+The path to search for executables
+
+[34mZZZ[39m"
+`;

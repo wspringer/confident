@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`meta should allow you to get the meta data 1`] = `
+Array [
+  Object {
+    "desc": "The port number",
+    "envVar": "PORT",
+    "path": "port",
+    "set": [Function],
+  },
+  Object {
+    "desc": "The name",
+    "envVar": "NAME",
+    "path": "name",
+    "set": [Function],
+  },
+]
+`;
+
+exports[`meta should allow you to set nested object data 1`] = `
+Object {
+  "sf": Object {
+    "port": "12",
+  },
+}
+`;
+
+exports[`meta should allow you to set object data 1`] = `
+Object {
+  "port": "12",
+}
+`;
