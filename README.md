@@ -37,7 +37,7 @@ SF_KEY
 The SalesForce API key to use
 ```
 
-But the main use case obvious is this:
+But the main use case obviously is this:
 
 ```typescript
 const config = loader.loadOrFail();
