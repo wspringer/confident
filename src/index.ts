@@ -1,3 +1,3 @@
-import {Loader, LoaderError} from './loader';
+import {loaderFrom, LoaderError} from './loader';
 
-export {Loader, LoaderError};
+export {loaderFrom as Loader, LoaderError};

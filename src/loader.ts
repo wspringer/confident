@@ -22,7 +22,7 @@ export class LoaderError extends CustomError {
   }
 }
 
-export const Loader = <T1, T2 extends yup.ObjectSchema<ObjectShape, T1>>(
+export const loaderFrom = <T1, T2 extends yup.ObjectSchema<ObjectShape, T1>>(
   schema: T2
 ): Loader<T1, T2> => {
   const entries = inspect(schema);

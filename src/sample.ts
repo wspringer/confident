@@ -11,9 +11,11 @@ const loader = Loader(
         desc: 'The SalesForce API key to use',
       }),
     }),
+    port: yup.number().integer().meta({desc: 'The port number to listen to'}),
   })
 );
 
 // loader.loadOrFail();
 
 const config = loader.loadOrFail();
+console.info(typeof config.port);

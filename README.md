@@ -5,9 +5,9 @@ A small library to load configuration from environment variables, mapping them t
 ## Usage
 
 ```typescript
-import { Loader } from 'confident';
+import {loaderFrom} from 'confident';
 
-const loader = Loader(
+const loader = loaderFrom(
   yup.object({
     path: yup.string().required().meta({
       desc: 'The path to search for executables',
@@ -58,7 +58,7 @@ You can pass in a default configuration object that must comply with the (partia
 const config = loader.loadOrFail({ sf: { key: 'foo' } });
 console.info(config.path);
 console.info(config.sf.key);
-console.info(config.whatever.foo.bar);
+console.info(config.whatever.foo.bar); # Will not compile
 ```
 
 In the above case, the configuration will load, since the loader will rely on the default value 'foo' in case `SF_KEY` isn't set. Also note that the compiler will fail to compile the code if you're referring to non existing configuration variables.

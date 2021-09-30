@@ -1,4 +1,4 @@
-import {Loader, LoaderError} from './loader';
+import {loaderFrom, LoaderError} from './loader';
 import * as yup from 'yup';
 import chalk from 'chalk';
 
@@ -30,26 +30,26 @@ describe('the configuration solution', () => {
   });
 
   it('should allow you grab the configuration', () => {
-    const loader = Loader(schema);
+    const loader = loaderFrom(schema);
     const config = loader.load();
     expect(config.path).not.toEqual('');
   });
 
   it('should allow you to rely on defaults', () => {
-    const loader = Loader(schema);
+    const loader = loaderFrom(schema);
     const config = loader.load({zzz: 2});
     expect(config.zzz).toEqual(2);
   });
 
   it('should allow you to print usage', () => {
-    const loader = Loader(schema);
+    const loader = loaderFrom(schema);
     loader.printUsage();
     expect(consoleInfoSpy).toBeCalledTimes(1);
     expect(consoleInfoSpy.mock.calls[0][0]).toMatchSnapshot();
   });
 
   it('should inform you about schema violations', () => {
-    const loader = Loader(
+    const loader = loaderFrom(
       yup.object({
         zzz: yup.object({yyy: yup.number().required()}),
       })
@@ -59,7 +59,7 @@ describe('the configuration solution', () => {
   });
 
   it('should print relevant messages', () => {
-    const loader = Loader(
+    const loader = loaderFrom(
       yup.object({
         zzz: yup.object({yyy: yup.number().required()}),
       })
